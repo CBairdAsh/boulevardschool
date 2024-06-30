@@ -1,2 +1,2 @@
 # boulevardschool
-Web site development for boulevardschool
+Web site development for Boulevard School
