@@ -1804,7 +1804,8 @@ textarea.w-select {
 }
 .w-dyn-empty {
   padding: 10px;
-  background-color: #dddddd;
+  background-color: #fff;
+  /* background-color: #dddddd; */
 }
 .w-dyn-hide {
   display: none !important;
@@ -1826,6 +1827,6 @@ textarea.w-select {
   left: 0;
 }
 /* customizations */
-#blog_link {
+/* #blog_link {
   display: none;
-}
+} */
