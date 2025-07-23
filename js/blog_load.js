@@ -11,6 +11,9 @@ const blogSupport  = {
             data.forEach(post => {
                 $('.parent_blog-showcase').append(post.html);
             });
+
+            // call bv_support here.
+            bk_support.persistUTMParams();
         })
         .catch(error => console.error('Error:', error));
     }
