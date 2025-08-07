@@ -54,4 +54,32 @@ const bk_support = {
     }
 }
 
+const formHandler = {
+    isMobileViewport: () => {
+        return window.matchMedia("(max-width: 768px)").matches;
+    },
+
+    resizeIframe: function(iframeEl) {
+        if (formHandler.isMobileViewport()) return;
+        $(iframeEl).css('height', `${(window.innerHeight * 1.75)}px`);
+    },
+
+    init: function() {
+        const iframes = document.querySelectorAll('.resizable-iframe');
+
+        iframes.forEach(iframe => {
+            // Resize immediately in case it's already loaded
+            formHandler.resizeIframe(iframe);
+
+            // Bind onload for future loads
+            iframe.onload = () => formHandler.resizeIframe(iframe);
+        });
+
+        // Bind window resize
+        $(window).on('resize', () => {
+            iframes.forEach(iframe => formHandler.resizeIframe(iframe));
+        });
+    }
+};
+
 document.addEventListener('DOMContentLoaded', bk_support.persistUTMParams);
