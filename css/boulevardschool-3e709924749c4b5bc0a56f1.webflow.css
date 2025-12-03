@@ -3865,7 +3865,10 @@ p {
 }
 @font-face {
   font-family: 'Ambit';
-  src: url('../fonts/Ambit-Bold.ttf') format('truetype'), url('../fonts/Ambit-Bold.otf') format('opentype');
+  src: url('../fonts/Ambit-Bold.woff2') format('woff2'),
+       url('../fonts/Ambit-Bold.woff') format('woff'),
+       url('../fonts/Ambit-Bold.ttf') format('truetype'),
+       url('../fonts/Ambit-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
