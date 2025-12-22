@@ -1506,10 +1506,15 @@ p {
   display: flex;
 }
 
+.heading_team_summerprices,
 .heading_team {
   text-align: center;
   max-width: 770px;
   margin: 10px auto 100px;
+}
+
+.heading_team_summerprices {
+  margin-bottom: 50px;
 }
 
 .gallery_team {
@@ -1848,6 +1853,22 @@ p {
   margin-bottom: 50px;
 }
 
+.holder_cards-programs-hero-sc {
+  z-index: 5;
+  align-self: stretch;
+  position: absolute;
+  top: auto;
+  /* bottom: 25px; */
+  bottom: -48px;
+  left: 0%;
+  right: 0%;
+}
+
+.icon_card_sc {
+  height: 100vh;
+  max-height: 111px;
+}
+
 .holder_cards-programs-hero {
   z-index: 5;
   align-self: stretch;
@@ -1858,12 +1879,24 @@ p {
   right: 0%;
 }
 
+.card-pricing-snippet {
+  margin-top: 15px; 
+  font-size: 15px;
+}
+
 .parent_cards-programs {
   justify-content: space-between;
   align-items: center;
   display: flex;
 }
 
+.parent_cards-programs_cta {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+.card_program-hero-long,
 .card_program-hero {
   background-color: #fff;
   border-radius: 15px;
@@ -1876,6 +1909,25 @@ p {
   line-height: 1.2;
   display: flex;
   box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+
+.card_program-hero-long {
+  margin-top: 15px;
+  width: fit-content;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.card_program-hero-long .mid-spacer {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.card_program-hero-long .button_primary {
+  margin-top: 15px;
 }
 
 .icon_card-program-hero {
@@ -2922,6 +2974,19 @@ p {
     margin-bottom: -164px;
   }
 
+  .holder_cards-programs-hero-sc .parent_cards-programs {
+    margin-bottom: 0px;
+  }
+
+  .icon_card_sc {
+    height: 100vh;
+    max-height: 87px;
+  }
+
+  .holder_cards-programs-hero-sc {
+    bottom: -172px;
+  }  
+
   .card_program-hero {
     background-color: #fff;
     border-radius: 10px;
@@ -3296,6 +3361,19 @@ p {
     width: 50px;
   }
 
+  .holder_cards-programs-hero-sc .parent_cards-programs {
+    margin-bottom: 0px;
+  }
+
+  .icon_card_sc {
+    height: 100vh;
+    max-height: 86px;
+  }
+
+  .holder_cards-programs-hero-sc {
+    bottom: -134px;
+  }    
+
   .item_topic {
     padding: 30px 20px;
   }
@@ -3648,6 +3726,10 @@ p {
     margin-bottom: 60px;
   }
 
+  .heading_team_summerprices {
+    margin-bottom: 10px;
+  }
+
   .gallery_team {
     grid-row-gap: 50px;
     grid-template-columns: 1fr;
@@ -3974,6 +4056,7 @@ p {
   }
 }
 
+
 /**/
 
 
@@ -4013,6 +4096,135 @@ p {
     font-size: 0.95rem;
   }
 }
-
-
 /**/
+
+/* General page styles */
+/* body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  background-color: #fdfdfd;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+ */
+/* h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  color: #2a4d7c; 
+  margin-bottom: 0.5em;
+}
+ */
+.scamp_pricing_zone a.cta-button, .scamp_pricing_zone a.download-link {
+  display: inline-block;
+  background-color: #2a4d7c; /* school blue */
+  color: #fff;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.scamp_pricing_zone a.cta-button:hover, 
+.scamp_pricing_zone a.download-link:hover {
+  background-color: #2a4d7c; /* darker blue hover */
+}
+
+/* Pricing table styles */
+.scamp_pricing_zone table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  font-size: 1rem;
+}
+
+.scamp_pricing_zone table thead {
+  background-color: #4169e3; /* school blue */
+  color: #fff;
+}
+
+.scamp_pricing_zone table th, 
+.scamp_pricing_zone table td {
+  border: 1px solid #ddd;
+  padding: 0.75em;
+  text-align: center;
+}
+
+.scamp_pricing_zone table tr:nth-child(even) {
+  background-color: #f7f9fc; /* light neutral background */
+}
+
+.scamp_pricing_zone table tr:hover {
+  background-color: #eaf2fb; /* subtle blue hover */
+}
+
+.scamp_pricing_zone table thead tr:hover {
+  background-color: #2a4d7c; /* darker blue hover */
+}
+
+/* Section lists */
+.scamp_pricing_zone ul {
+  list-style-type: disc;
+  margin: 1em 0 2em 1.5em;
+  font-size: .95rem;
+}
+
+.scamp_pricing_zone ul li {
+  margin-bottom: 0.5em;
+}
+
+.mobile-table-info {
+  display: none;
+}
+
+.mobile-table-head {
+  font-weight: 400;
+}
+
+.cta_stack {
+  margin-top: 0px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scamp_pricing_zone table, 
+  .scamp_pricing_zone thead, 
+  .scamp_pricing_zone tbody, 
+  .scamp_pricing_zone th, 
+  .scamp_pricing_zone td, 
+  .scamp_pricing_zone tr {
+    display: block;
+  }
+  .scamp_pricing_zone table thead {
+    display: none;
+  }
+  .scamp_pricing_zone table tr {
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    padding: 0.5em;
+    background-color: #fff;
+  }
+  .scamp_pricing_zone table td {
+    text-align: left;
+    border: none;
+    padding: 0.5em;
+  }
+  .scamp_pricing_zone table td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.25em;
+    color: #2a4d7c;
+  }
+
+  .mobile-table-info {
+    display: inline-block;
+  }
+  .mobile-table-head {
+    font-weight: 600;
+  }  
+
+  .cta_stack {
+    margin-top: 15px;
+  }  
+}
